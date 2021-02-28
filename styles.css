@@ -1,0 +1,82 @@
+body {
+    /* background: #83c5be; */
+    font-family: 'Roboto', sans-serif;
+  }
+
+.sub-head{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    /* color: #03045e; */
+    font-size: 35px;
+    line-height: 70px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+ol.prefixed {
+    counter-reset: item;
+    list-style-type: none;
+    *list-style-type: decimal;
+    /*Conditional hack for ie7*/
+  }
+  ol.prefixed li:before {
+    content: 'Q' counter(item, decimal) '. ';
+    counter-increment: item;
+  }
+
+  ol.styled {
+    counter-reset: item;
+  }
+  ol.styled li {
+    background: rgba(78, 68, 50, 0.1);
+    border-radius: 4px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  ol.styled li:before {
+    content: '' counter(item, decimal) '';
+    background: grey;
+    border-radius: 4px;
+    color: #f7f7ef;
+    font-size: 15px;
+    margin: 0 5px 0 8px;
+    padding: 4px 7px;
+  }
+
+/* HEADING 3*/
+
+.heading3 h3 {
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2em;
+}
+
+.heading3 h3:before,
+.heading3 h3:after {
+  content: '';
+  display: inline-block;
+  height: 1px;  
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+}
+
+.heading3 h3:before {
+  background-color: #555;
+  left: -.5em;
+  margin-left: -100%;
+  width: 100%;
+}
+
+.heading3 h3:after {
+  background-color: #555;
+  left: .5em;
+  margin-right: -100%;
+  width: 100%;
+}
+
